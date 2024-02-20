@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js/dist/Chart.min.css">
+  <title>Dashboad</title>
+  <style>
+    canvas {
+      display: block;
+      margin: 20px auto;
+    }
+  </style>
+  <link rel="stylesheet" href="./root.css">
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="siderbar" id="siderbar">
+      <div class="logo-container">
+        <img src="./assets/logo.png" alt="logo" />
+      </div>
+      <div class="menu-container">
+        <div class="title-box">
+          <div class="icon-title">
+            <img src="./assets/icons/grap.png" alt="icon grap" />
+          </div>
+          <h6 class="title">Dashboad</h6>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item">
+            <img src="./assets//icons/group.png" alt="icon group" />
+            <p>Leaderboard</p>
+          </div>
+          <div class="menu-item">
+            <img src="./assets//icons/shopping-cart.png" alt="icon group" />
+            <p>Order</p>
+          </div>
+          <div class="menu-item">
+            <img src="./assets//icons/cart.png" alt="icon group" />
+            <p>Products</p>
+          </div>
+          <div class="menu-item">
+            <img src="./assets//icons/chart.png" alt="icon group" />
+            <p>Sales Report</p>
+          </div>
+          <div class="menu-item">
+            <img src="./assets//icons/message.png" alt="icon group" />
+            <p>Messages</p>
+          </div>
+          <div class="menu-item">
+            <img src="./assets//icons/setting.png" alt="icon group" />
+            <p>Settings</p>
+          </div>
+          <div class="menu-item">
+            <img src="./assets//icons/signout.png" alt="icon group" />
+            <p>Sign Out</p>
+          </div>
+        </div>
+      </div>
+      <div class="pro-box">
+        <div class="pro-wrapper">
+          <img src="./assets/sub-logo.png" alt="sub logo" />
+          <h4>Dabang Pro</h4>
+          <p>Get access to all <br> features on tetumbas</p>
+          <button>Get Pro</button>
+        </div>
+      </div>
+    </div>
+    <div class="content-container">
+      <div class="heading-wrapper">
+        <div class="heading-container">
+          <div class="heading-title">
+            <h2>Dashboard</h2>
+          </div>
+          <div class="search-box">
+            <img src="./assets/search.svg" alt="search icon" />
+            <input type="search" name="search" placeholder="Search here..." /> 
+          </div>
+          <div class="user-container">
+            <div class="language-box">
+              <img src="./assets/flag.svg" alt="flag" />
+              <p>Eng (US)</p>
+              <img src="./assets/arrow.png" alt="arrow icon">
+            </div>
+            <div class="user-box">
+              <div class="notification">
+                <img src="./assets/bell.png" alt="bell icon" />
+              </div>
+              <div class="account">
+                <div class="img-user" >
+                  <img src="./assets/client.png" alt="user" />
+                </div>
+                <div class="infor">
+                  <div class="name-box">
+                    <div class="name">Tam Phan</div>
+                    <img src="./assets/arrow.png" alt="arrow icon">
+                  </div>
+                  <div class="position">Admin</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="parameter-wapper">
+        <div class="today-parameter">
+          <div class="heading-parameter">
+            <div class="title-parameter-box">
+              <h2 class="title">Today’s Sales</h2>                                                    
+              <p>Sales Summery</p>
+            </div>
+            <div class="export-btn">
+              <button>
+                <img src="./assets/export.png" alt="export icon" />
+                Export 
+              </button>
+            </div>
+          </div>
+          <div class="parameter-box">
+            <div class="parameter-item sales">
+              <div class="img-item">
+                <img src="./assets/prams/Icon-3.png" alt="pram icon">
+              </div>
+              <h4 class="total">$1k</h4>
+              <p class="sub-title">Total Sales</p>  
+              <p class="index">+8% from yesterday</p  >
+            </div>
+            <div class="parameter-item order">
+              <div class="img-item">
+                <img src="./assets/prams/Icon-2.png" alt="pram icon">
+              </div>
+              <h4 class="total">300</h4>
+              <p class="sub-title">Total Order</p>  
+              <p class="index">+5% from yesterday</p  >
+            </div>
+            <div class="parameter-item sold">
+              <div class="img-item">
+                <img src="./assets/prams/Icon-1.png" alt="pram icon">
+              </div>
+              <h4 class="total">5</h4>
+              <p class="sub-title">Product Sold</p>  
+              <p class="index">+8% from yesterday</p  >
+            </div>
+            <div class="parameter-item customers">
+              <div class="img-item">
+                <img src="./assets/prams/Icon-3.png" alt="pram icon">
+              </div>
+              <h4 class="total">8</h4>
+              <p class="sub-title">New Customers</p>  
+              <p class="index">+8% from yesterday</p  >
+            </div>
+          </div>
+        </div>
+        <div class="insights">
+          <h4 class="title">Visitor Insights</h4>
+          <canvas id="myLineChart" width="100%" height="180px"></canvas>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/Chart.min.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
